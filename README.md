@@ -1,6 +1,6 @@
 # 🧠 Deep Learning Final Project – Spring 2024
 
-This repository showcases a comprehensive deep learning project that covers multiple computer vision tasks including classification, object detection, segmentation, and neural style transfer. Models were trained and evaluated using CIFAR-10, Tiny ImageNet, ADE20K, and custom datasets.
+This repository showcases a comprehensive deep learning project that covers multiple computer vision tasks including classification, object detection, and semantic segmentation. Models were trained and evaluated using CIFAR-10, Tiny ImageNet, ADE20K, and custom datasets.
 
 ---
 
@@ -9,10 +9,10 @@ This repository showcases a comprehensive deep learning project that covers mult
 | Folder       | Contents |
 |--------------|----------|
 | `code/`      | Jupyter Notebooks for each experiment |
-| `datasets/`  | CSVs and dataset files |
-| `images/`    | Style/content images and output results |
+| `datasets/`  | Dataset files like `.xlsx` |
+| `images/`    | Input and result images |
 | `models/`    | Trained models (`.h5` files) |
-| `docs/`      | Report and visuals |
+| `docs/`      | Final project report |
 
 ---
 
@@ -21,40 +21,49 @@ This repository showcases a comprehensive deep learning project that covers mult
 ### ✅ Classification
 - **Custom CNN** on CIFAR-10
 - Final Test Accuracy: **75.6%**
-
-### ✅ Transfer Learning
-- **VGG19**: 61.9%
-- **ResNet50**: 36.8%
+- VGG19: **61.9%**
+- ResNet50: **36.8%**
 
 ### ✅ Fine-tuning
-- Custom CNN on **Tiny ImageNet**
+- **Custom CNN** on Tiny ImageNet
 - Final Accuracy: **0.6%** (200-class challenge)
 
 ### ✅ Object Detection
-- **YOLOv8** on self-driving car dataset
-- Detects cars, trucks, pedestrians, etc. with bounding boxes
+- **YOLOv8** on a self-driving car dataset
+- Detects cars, trucks, pedestrians, etc. using bounding boxes
 
 ### ✅ Semantic Segmentation
 - **SegFormer** (Transformer-based model)
 - Dataset: ADE20K (150 classes)
 - IoU: ~0.97 on sample set
 
-### ✅ Neural Style Transfer
-- Transfers artistic style to content images using CNN feature extraction
+---
+
+## ▶️ Open in Google Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/BHARGAVATEJABORRA/deep-learning-final-project-SP24)
+
+You can explore the notebooks interactively below:
+
+- 📦 [Object Detection (YOLOv8)](https://colab.research.google.com/github/BHARGAVATEJABORRA/deep-learning-final-project-SP24/blob/main/code/Object_detection_by_using_YOLOv8.ipynb)
+- 🧩 [Segmentation (SegFormer)](https://colab.research.google.com/github/BHARGAVATEJABORRA/deep-learning-final-project-SP24/blob/main/code/Fine_tune_SegFormer.ipynb)
+- 📊 [Image Classification (CNN, VGG19, ResNet50)](https://colab.research.google.com/github/BHARGAVATEJABORRA/deep-learning-final-project-SP24/blob/main/code/experiment_part_a.ipynb)
+
+> ⚠️ To reproduce results, upload any required `.h5` models and input images to the Colab environment from the `models/` and `images/` folders.
 
 ---
 
-## 🖼️ Sample Output (Style Transfer)
+## 🛠️ Tech Stack
 
-| Content | Style | Output |
-|---------|-------|--------|
-| ![](images/1.jpg) | ![](images/1_style.jpg) | ![](images/1_c.jpg) |
+- Python
+- PyTorch
+- TensorFlow
+- OpenCV
+- Transformers
+- Jupyter Notebooks / Google Colab
 
 ---
 
-## 🚀 How to Run
+## 📄 License
 
-1. Clone the repository:
-```bash
-git clone https://github.com/BHARGAVATEJABORRA/deep-learning-final-project-SP24.git
-cd deep-learning-final-project-SP24
+This project is licensed under the [MIT License](LICENSE).
